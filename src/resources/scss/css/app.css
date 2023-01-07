@@ -1,55 +1,68 @@
 h1 {
-  color: #e75730; }
+  color: rgb(231, 87, 48);
+}
 
 h2 {
-  color: #ac8cdb; }
+  color: rgb(172, 140, 219);
+}
 
 h4 {
   size: 1rem;
-  color: #ede2e6; }
+  color: rgb(237, 226, 230);
+}
 
 body {
   background-color: white;
-  margin: 0; }
+  margin: 0;
+}
 
 .card-course-item {
   background-color: black;
-  background-attachment: fixed; }
+  background-attachment: fixed;
+}
 
 .user-avatar {
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  margin-right: 4px; }
+  margin-right: 4px;
+}
 
 a {
-  color: #e75730;
-  text-decoration: none; }
+  color: rgb(231, 87, 48);
+  text-decoration: none;
+}
 
 p {
-  color: Black; }
+  color: Black;
+}
 
 .card-course-item {
-  margin-top: 16px; }
+  margin-top: 16px;
+}
 
 .tenpquan {
   color: darkgoldenrod;
-  font-size: 25px; }
+  font-size: 25px;
+}
 
 :root {
-  --tieude: rgb(185, 107, 61); }
+  --tieude: rgb(185, 107, 61);
+}
 
 .text {
-  color: red; }
+  color: red;
+}
 
 .tenphim {
   color: darkgoldenrod;
-  font-size: 25px; }
+  font-size: 25px;
+}
 
 .button {
   margin: 20px 0;
   background: #0f1014;
-  color: #f7f7f7;
+  color: rgb(247, 247, 247);
   border: none;
   outline: none;
   padding: 10px 15px;
@@ -57,10 +70,13 @@ p {
   transition: box-shadow 0.2s;
   text-transform: uppercase;
   letter-spacing: 2px;
-  border: 1px solid gray; }
+  border: 1px solid gray;
+}
 
 label {
-  color: white; }
+  color: white;
+}
 
 .a1 {
-  color: white; }
+  color: white;
+}/*# sourceMappingURL=app.css.map */

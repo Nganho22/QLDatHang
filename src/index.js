@@ -47,7 +47,7 @@ app.get('/login', (req, res) => {
 app.post('/login', (req, res) => {
     console.log(req.body)
     //res.send('Hello World!')
-    res.send('');
+    res.send('login');
 })
 
 
