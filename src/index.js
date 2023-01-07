@@ -5,7 +5,13 @@ const { engine } = require('express-handlebars')
 const app = express()
 const port = 3000
 
+const route = require('./routes')
 app.use(express.static(path.join(__dirname, 'public')))
+
+app.use(express.urlencoded({
+    extended: true,
+}),
+)
 app.use(morgan('combined'))
 
 app.engine('hbs', engine(
@@ -14,19 +20,43 @@ app.engine('hbs', engine(
     }
 ))
 app.set('view engine', 'hbs');
+
+route(app)
+
 app.set('views', path.join(__dirname, 'resources/views'))
 
 //console.log('PATH: ', path.join(__dirname, 'resources/views'))
 
+/*
 app.get('/', (req, res) => {
     //res.send('Hello World!')
     res.render('home');
 })
-
-app.get('/Search', (req, res) => {
+*/
+app.get('/Me', (req, res) => {
     //res.send('Hello World!')
-    res.render('search');
+    res.render('me');
 })
+
+app.get('/login', (req, res) => {
+    //res.send('Hello World!')
+    res.render('login');
+})
+
+
+app.post('/login', (req, res) => {
+    console.log(req.body)
+    //res.send('Hello World!')
+    res.send('');
+})
+
+
+app.get('/signup', (req, res) => {
+    //res.send('Hello World!')
+    res.render('signup');
+})
+
+
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`);
 });
