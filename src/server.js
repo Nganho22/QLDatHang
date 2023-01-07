@@ -8,7 +8,7 @@ const port = 3000
 const route = require('./routes')
 const db = require('./app/database/mssql.database')
 
-db.poolPromise
+//db.poolPromise
 
 app.use(express.static(path.join(__dirname, 'public')))
 
@@ -31,12 +31,12 @@ app.set('views', path.join(__dirname, 'resources/views'))
 
 //console.log('PATH: ', path.join(__dirname, 'resources/views'))
 
-/*
+
 app.get('/', (req, res) => {
     //res.send('Hello World!')
     res.render('home');
 })
-*/
+
 app.get('/Me', (req, res) => {
     //res.send('Hello World!')
     res.render('me');
@@ -64,3 +64,5 @@ app.get('/signup', (req, res) => {
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`);
 });
+
+

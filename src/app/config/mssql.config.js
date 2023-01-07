@@ -12,4 +12,4 @@ module.exports = {
     options: {
         trustedConnection: true,
     },
-};
+}
