@@ -1,5 +1,5 @@
 const sql = require("mssql/msnodesqlv8");
-const poolPromise = new sql.ConnectionPool(require("../configs/mssql.config"))
+const poolPromise = new sql.ConnectionPool(require("../config/mssql.config"))
     .connect()
     .then((pool) => {
         console.log("Connect to MSSQL");
@@ -8,6 +8,7 @@ const poolPromise = new sql.ConnectionPool(require("../configs/mssql.config"))
     .catch((err) =>
         console.error("Database Connection failed! Bad config: ", err)
     );
+
 
 module.exports = {
     sql,
