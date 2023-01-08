@@ -1,7 +1,7 @@
 module.exports = {
     server: "ABC1",
     driver: "msnodesqlv8",
-    database: "QLyDatHang",
+    database: "QLDH",
     authentication: {
         type: 'default',
         options: {

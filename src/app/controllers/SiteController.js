@@ -1,4 +1,4 @@
-const Adminqly = require('../models/AdminQLy.model')
+//const Adminqly = require('../models/AdminQLy.model')
 const { sql, poolPromise } = require('../database/mssql.database')
 
 const { mongooseToObject } = require('../util/mongoose')
@@ -7,8 +7,20 @@ const { json } = require('express')
 
 
 class SiteControllers {
+
+    login(req, res, next){
+        try{
+
+        } catch(err){
+            console.error(err)
+        }
+    }
     home(req, res) {
         res.render('home')
+    }
+
+    me(req, res) {
+        res.render('Admin')
     }
 
 
