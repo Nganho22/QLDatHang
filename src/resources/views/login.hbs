@@ -1,9 +1,16 @@
-<div class="mt-4">
-    <form method="POST" action="">
-        <div class="form-group">
-            <label for="Login-input">Login</label>
-            <input type="text" name="q" class="form-control" id="Login-input" placeholder="Enter email">
+<div class="login-page">   {{!-- "mt-4" --}}
+  <div class="form">
+    <form class="login-form">
+        <label for="name">Username</label>
+        <input type="text" placeholder="Tên đăng nhập" name="uname" required>
+        <label for="pass">Password</label>
+        <input type="password" placeholder="Mật khẩu" name="psw" required>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button>login</button>
+        <p class="message">Not registered? <a href="#">Create an account</a></p>
+        </div>
     </form>
+  </div>
 </div>
+
+
