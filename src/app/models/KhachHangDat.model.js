@@ -1,18 +1,13 @@
-const mongoose = require("mongoose");
-const slug = require("mongoose-slug-generator");
-//const { NVarChar, Char, VarChar } = require('mssql')
-const Schema = mongoose.Schema;
-mongoose.plugin(slug);
+const { sql, poolPromise } = require('../database/mssql.database')
+//const bcrypt = require('bcryptjs');
 
-const KhachHangDat = new Schema({
-  Ma: { type: Number },
-  CMND: { type: String },
-  SoDienThoai: { type: String },
-  Email: { type: String },
-  SoNha: { type: String },
-  Duong: { type: String },
-  Thanhpho: { type: String },
-  MaQuan: { type: String },
-});
+let Xem_DS_KhachHang = async () => {
+  const pool = await poolPromise;
+  const KhachHangDats = await pool.query("select * from KhachHangDat");
+  return KhachHangDats
+}
 
-module.exports = mongoose.model("KhachHangDat", KhachHangDat);
+
+module.exports = {
+  Xem_DS_KhachHang
+}
