@@ -13,7 +13,6 @@ let XemNV = async () => {
     return nv
 }
 
-
 module.exports = {
     XemAdmin,
     XemNV,
