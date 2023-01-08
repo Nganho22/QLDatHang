@@ -15,8 +15,14 @@ class SiteControllers {
         try {
             //const pool = await poolPromise;
             const Adminqlys = await Adminqly.XemAdmin()
-            return res
-                .json(Adminqlys)
+            const kq =[]
+            for(const t of Adminqlys.recordset)
+            {
+                kq.push(t)
+            }
+            console.log(Adminqlys.recordset)
+            res
+                .json({kq: kq})
         } catch (err) {
             console.error(err);
         }
