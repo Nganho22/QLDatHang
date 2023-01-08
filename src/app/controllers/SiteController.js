@@ -33,6 +33,17 @@ class SiteControllers {
         }
     };
 
+    async XemMon(req, res) {
+        try {
+            //const pool = await poolPromise;
+            const nv = await Adminqly.XemDSMOn('123')
+            return res
+                .json(nv)
+        } catch (err) {
+            console.error(err);
+        }
+    };
+
 }
 
 module.exports = new SiteControllers();

@@ -13,7 +13,22 @@ let XemNV = async () => {
     return nv
 }
 
+let XemDSMOn = async (madonhang) => {
+    const pool = await poolPromise;
+
+    let values =[]
+    values.push(madonhang)
+    let sql = "EXEC DanhSachMonAnTrongDon " + values
+    const nv = await pool.query(sql);
+    //console.log("EXEC DanhSachMonAnTrongDon " + values)
+    //console.log(nv)
+    return nv
+}
+
+
+
 module.exports = {
     XemAdmin,
     XemNV,
+    XemDSMOn,
 }
