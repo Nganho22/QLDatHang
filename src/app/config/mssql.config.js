@@ -1,5 +1,5 @@
 module.exports = {
-    server: "ABC1",
+    server: "LAPTOP-8I1L1P2L\\SQLEXPRESS",
     driver: "msnodesqlv8",
     database: "QLDH",
     authentication: {
