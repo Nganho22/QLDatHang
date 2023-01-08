@@ -6,15 +6,14 @@ const Schema = mongoose.Schema
 mongoose.plugin(slug)
 
 const Adminqly = new Schema({
-    MaAdmin: {type: Number},
-    CMND: {type: String},
-    SoDienThoai: {type: String},
-    Email: {type: String},
-    SoNha: {type: String},
-    Duong: {type: String},
-    Quan: {type: String},
-    Thanhpho: {type: String}
-
+    MaAdmin: { type: Number },
+    CMND: { type: String },
+    SoDienThoai: { type: String },
+    Email: { type: String },
+    SoNha: { type: String },
+    Duong: { type: String },
+    Quan: { type: String },
+    Thanhpho: { type: String }
 
 })
 
