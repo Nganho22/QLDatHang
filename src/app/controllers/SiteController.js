@@ -7,30 +7,27 @@ const { json } = require('express')
 
 
 class SiteControllers {
-
-    login(req, res, next){
-        try{
-
-        } catch(err){
-            console.error(err)
-        }
-    }
-    home(req, res) {
-        res.render('home')
-    }
-
     me(req, res) {
         res.render('Admin')
     }
 
-
-    async queryExample1(req, res) {
+    async Xem_Ad(req, res) {
         try {
             //const pool = await poolPromise;
             const Adminqlys = await Adminqly.XemAdmin()
-            console.log(Adminqlys)
             return res
                 .json(Adminqlys)
+        } catch (err) {
+            console.error(err);
+        }
+    };
+
+    async Xem_NV(req, res) {
+        try {
+            //const pool = await poolPromise;
+            const nv = await Adminqly.XemNV()
+            return res
+                .json(nv)
         } catch (err) {
             console.error(err);
         }

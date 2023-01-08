@@ -3,8 +3,8 @@ const router = express.Router()
 
 const SiteController = require('../app/controllers/SiteController')
 
+router.get('/', SiteController.me)
+router.get('/ad', SiteController.Xem_Ad)
+router.get('/nv', SiteController.Xem_NV)
 
-router.get('/', SiteController.home)
-router.get('/hi', SiteController.queryExample1)
-router.get('/Admin', SiteController.me)
 module.exports = router

@@ -3,11 +3,18 @@ const { sql, poolPromise } = require('../database/mssql.database')
 
 let XemAdmin = async () => {
     const pool = await poolPromise;
-    const Adminqlys = await pool.query("select * from AdminQly");
+    const Adminqlys = await pool.query("EXEC Xem_Ds_Ad");
     return Adminqlys
+}
+
+let XemNV = async () => {
+    const pool = await poolPromise;
+    const nv = await pool.query("EXEC Xem_Ds_Nv");
+    return nv
 }
 
 
 module.exports = {
-    XemAdmin
+    XemAdmin,
+    XemNV,
 }
