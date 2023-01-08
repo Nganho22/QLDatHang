@@ -3,7 +3,8 @@ const router = express.Router()
 
 const KhachController = require('../app/controllers/KhachController')
 
-router.get('/', KhachController.me)
-router.get('/kh', KhachController.Xem_DS_KhachHang)
+router.get('/', KhachController.kh)
+router.get('/dsdh', KhachController.Xem_DSDon)
+router.get('/ctdh', KhachController.Xem_CTDH)
 
 module.exports = router

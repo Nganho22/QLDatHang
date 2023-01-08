@@ -16,5 +16,4 @@ function route(app) {
     app.use('/', HomeController)
 }
 
-
 module.exports = route

@@ -15,7 +15,7 @@ class NhanVienControllers {
             //const pool = await poolPromise;
             const NhanViens = await NhanVien.XemHD('38')
             return res
-                .json(NhanViens)
+                .json(NhanViens.recordset)
         } catch (err) {
             console.error(err);
         }
@@ -25,7 +25,7 @@ class NhanVienControllers {
         try {
             const nv = await NhanVien.XemDT1('8900')
             return res
-                .json(nv)
+                .json(nv.recordset)
         } catch (err) {
             console.error(err);
         }
@@ -45,7 +45,7 @@ class NhanVienControllers {
         try {
             const nv = await NhanVien.XemDT3('6323')
             return res
-                .json(nv)
+                .json(nv.recordset)
         } catch (err) {
             console.error(err);
         }
