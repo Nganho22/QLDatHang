@@ -30,14 +30,20 @@ route(app)
 app.set('views', path.join(__dirname, 'resources/views'))
 
 //console.log('PATH: ', path.join(__dirname, 'resources/views'))
+/*
 app.get('/Me', (req, res) => {
     //res.send('Hello World!')
     res.render('me');
-})
+})*/
 
 app.get('/', (req, res) => {
     //res.send('Hello World!')
     res.render('home');
+})
+
+app.get('/search', (req, res) => {
+    //res.send('Hello World!')
+    res.render('search');
 })
 
 

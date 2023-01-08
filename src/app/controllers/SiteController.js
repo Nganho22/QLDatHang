@@ -1,4 +1,4 @@
-//const Adminqly = require('../models/AdminQLy.model')
+const Adminqly = require('../models/AdminQLy.model')
 const { sql, poolPromise } = require('../database/mssql.database')
 
 const { mongooseToObject } = require('../util/mongoose')
@@ -26,12 +26,11 @@ class SiteControllers {
 
     async queryExample1(req, res) {
         try {
-            const pool = await poolPromise;
-            const Adminqlys = await pool.query("select * from AdminQly");
+            //const pool = await poolPromise;
+            const Adminqlys = await Adminqly.XemAdmin()
             console.log(Adminqlys)
             return res
-                //.json({result})
-                .json(Adminqlys.recordset)
+                .json(Adminqlys)
         } catch (err) {
             console.error(err);
         }
