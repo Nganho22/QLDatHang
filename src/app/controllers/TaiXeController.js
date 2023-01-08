@@ -21,6 +21,17 @@ class TaiXeControllers {
         }
     };
 
+    async TimKiemDonHangTheoQuan(req, res) {
+        try {
+            //const pool = await poolPromise;
+            const dh = await TaiXe.TimKiemDonHangTheoQuan(1)
+            return res
+                .json(dh)
+        } catch (err) {
+            console.error(err);
+        }
+    };
+
 }
 
 module.exports = new TaiXeControllers();
