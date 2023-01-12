@@ -16,6 +16,7 @@ class SiteControllers {
             //const pool = await poolPromise;
             const Adminqlys = await Adminqly.XemAdmin()
             const kq =[]
+            console.log(Adminqlys.recordset)
             for(const t of Adminqlys.recordset)
             {
                 kq.push(t)
@@ -27,6 +28,7 @@ class SiteControllers {
             console.error(err);
         }
     };
+
 
     async Xem_NV(req, res) {
         try {
